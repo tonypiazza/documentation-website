@@ -30,6 +30,8 @@ FROM docker.io/library/nginx:1.27-alpine
 
 COPY deploy-preview/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /build /usr/share/nginx/html
+# Root index.html redirects to the MA docs client-side (see nginx.conf comment).
+COPY deploy-preview/root-index.html /usr/share/nginx/html/index.html
 
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
