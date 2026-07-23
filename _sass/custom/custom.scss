@@ -236,10 +236,6 @@ img {
   @include version-warning('supported');
 }
 
-.migration-assistant-version-banner {
-  @include version-warning('current');
-}
-
 .unsupported-version-warning {
   @include version-warning('unsupported');
 }

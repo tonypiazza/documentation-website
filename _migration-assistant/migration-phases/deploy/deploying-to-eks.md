@@ -2,14 +2,13 @@
 layout: default
 title: Deploy on Amazon EKS
 nav_order: 2
-grand_parent: Migration workflows
 parent: Choose your deployment
 permalink: /migration-assistant/migration-phases/deploy/deploying-to-eks/
 ---
 
 # Deploy on Amazon EKS
 
-This is the recommended production path on AWS. You receive the same Migration Assistant engine and workflows as generic Kubernetes, but the Amazon Elastic Kubernetes Service (EKS) tooling removes much of the AWS platform work that otherwise delays migrations.
+This is the recommended production path on AWS. You receive the same Migration Assistant engine and workflows as any other Kubernetes platform, but the Amazon Elastic Kubernetes Service (EKS) tooling removes much of the AWS platform work that otherwise delays migrations.
 
 EKS makes the migration **easier to deploy, easier to secure, and easier to operate** without changing how migrations run.
 
@@ -189,7 +188,7 @@ Migration Assistant supports the following authentication methods on EKS.
 
 ### Basic authentication
 
-Basic authentication works the same way as generic Kubernetes: create Kubernetes secrets and reference them in `authConfig.basic.secretName`.
+Basic authentication works the same way as on any other Kubernetes platform: create Kubernetes secrets and reference them in `authConfig.basic.secretName`.
 
 ### Authenticate with AWS Signature Version 4
 
@@ -270,6 +269,8 @@ If CloudFormation succeeded but the Helm portion failed, rerun only the bootstra
 {% include copy.html %}
 
 ## Removal
+
+Once you no longer need Migration Assistant for rollback, replay, or comparison, remove it. Do not remove it immediately after cutover. For the readiness checklist, see [Removing migration infrastructure]({{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/remove-migration-infrastructure/).
 
 To remove Migration Assistant from EKS, run the following commands:
 

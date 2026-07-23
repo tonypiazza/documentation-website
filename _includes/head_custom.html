@@ -55,3 +55,12 @@
 {% else %}
   <script src="{{ '/latest/assets/js/version-selector.js' }}"></script>
 {% endif %}
+
+{% comment %}
+  Hypothesis inline annotations — team-review preview builds only.
+  Rendered only when JEKYLL_ENV=preview (the Aiven review container), so it
+  never appears in a normal or CI build and never reaches the upstream PR.
+{% endcomment %}
+{% if jekyll.environment == "preview" %}
+  <script src="https://hypothes.is/embed.js" async></script>
+{% endif %}

@@ -77,7 +77,7 @@ Most migration risk falls into four buckets:
 
 - **Application compatibility**: Queries, aggregations, index names, aliases, or field names may need to change.
 - **Metadata compatibility**: Mappings, templates, and settings may need transformations.
-- **Data movement**: Snapshots, source S3 access, target ingest throughput, and large shards may affect runtime.
+- **Data movement**: Snapshots, snapshot storage access (such as Amazon S3 or Google Cloud Storage), target ingest throughput, and large shards may affect runtime.
 - **Operational cutover**: You need to decide whether a write pause is acceptable or whether Capture and Replay is required.
 
 ## Decide whether you need transformations
@@ -107,7 +107,7 @@ If you are using custom transformations, always run a pilot first.
 
 If you are deploying on AWS, determine whether to manage the platform configuration yourself or use Amazon EKS to automate it:
 
-- Use **generic Kubernetes** when you already operate your own Kubernetes platform and are proficient in configuring AWS identity, images, storage, and observability.
+- Use **another Kubernetes platform** when you already operate your own Kubernetes platform and are proficient in configuring AWS identity, images, storage, and observability.
 - Use **Amazon EKS** when you want the recommended AWS production path with bootstrap automation, pod identity, snapshot helpers, and CloudWatch integration.
 
 ## Next step
