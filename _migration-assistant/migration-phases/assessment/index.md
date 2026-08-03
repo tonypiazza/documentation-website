@@ -105,10 +105,12 @@ If you are using custom transformations, always run a pilot first.
 
 ## Platform considerations
 
-If you are deploying on AWS, determine whether to manage the platform configuration yourself or use Amazon EKS to automate it:
+Decide whether you want a managed-cloud path to automate the platform configuration or you will operate your own Kubernetes platform:
 
-- Use **another Kubernetes platform** when you already operate your own Kubernetes platform and are proficient in configuring AWS identity, images, storage, and observability.
-- Use **Amazon EKS** when you want the recommended AWS production path with bootstrap automation, pod identity, snapshot helpers, and CloudWatch integration.
+- Use a **managed-cloud path** when you want the recommended production path for your cloud, with the identity, image, snapshot, and observability integrations prepared for you---**Amazon EKS** on AWS or **Google Kubernetes Engine (GKE)** on GCP.
+- Use **another Kubernetes platform** when you already operate your own Kubernetes platform and are comfortable configuring identity, images, storage, and observability yourself.
+
+For a full comparison, see [Choose your deployment]({{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/deploy/).
 
 ## Next step
 

@@ -38,6 +38,8 @@ Throughout this playbook, `<STAGE>` is a short label such as `dev`, `staging`, o
 
 ## Step 1: Download the bootstrap script
 
+Run these steps from AWS CloudShell or a local terminal with the tools listed in [Prerequisites](#prerequisites). CloudShell is recommended because it comes preconfigured and avoids platform-specific issues.
+
 Download the bootstrap script:
 
 ```bash

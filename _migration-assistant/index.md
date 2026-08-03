@@ -9,26 +9,6 @@ permalink: /migration-assistant/
 redirect_from:
   - /migration-assistant/overview/
   - /migration-assistant/index/
-
-items:
-  - heading: "Is Migration Assistant right for you?"
-    description: "Decide whether Migration Assistant fits your migration path, downtime target, and operational model."
-    link: "/migration-assistant/is-migration-assistant-right-for-you/"
-  - heading: "Why Kubernetes?"
-    description: "The philosophy behind Migration Assistant and the recommended managed-cloud paths on AWS and GCP."
-    link: "/migration-assistant/why-kubernetes/"
-  - heading: "Choose your deployment"
-    description: "Compare Amazon EKS, GKE, and other Kubernetes platforms, and decide which path fits your environment."
-    link: "/migration-assistant/migration-phases/deploy/"
-  - heading: "How migrations run"
-    description: "The workflow-driven lifecycle for backfill, Capture and Replay, validation, and cutover."
-    link: "/migration-assistant/migration-phases/"
-  - heading: "Run a migration"
-    description: "Use the Workflow CLI as the primary interface for configuring, submitting, and managing migrations."
-    link: "/migration-assistant/workflow-cli/"
-  - heading: "Use a playbook"
-    description: "Follow path-specific guides for common source and target combinations."
-    link: "/migration-assistant/playbooks/"
 ---
 
 # ![Migration Assistant icon]({{site.url}}{{site.baseurl}}/images/icons/MigrationUpgrade_Color_Icon.svg){: .heading-icon} Migration Assistant for OpenSearch
@@ -41,7 +21,12 @@ The Migration Assistant operating model is:
 - Migration Assistant runs the work on Kubernetes.
 - You use the Migration Console and Workflow CLI to submit, observe, approve, validate, and switch traffic to the target.
 
-Migration Assistant runs on any Kubernetes distribution. Two choices are independent: **where Migration Assistant runs** and **what you migrate to**. Where it runs can be a managed-cloud path, such as **Amazon EKS on AWS** or **Google Kubernetes Engine (GKE) on GCP**, or any other Kubernetes platform. Each managed-cloud path supplies the identity, image, snapshot, and observability integrations that you typically need for a real migration.
+Migration Assistant runs on any Kubernetes distribution. Two choices are independent:
+
+- **Where Migration Assistant runs**: a managed-cloud path, such as **Amazon EKS on AWS** or **Google Kubernetes Engine (GKE) on GCP**, or any other Kubernetes platform. Each managed-cloud path supplies the identity, image, snapshot, and observability integrations that you typically need for a real migration.
+- **What you migrate to**: the OpenSearch target that best fits your environment---a self-managed OpenSearch cluster or a managed OpenSearch service.
+
+These choices are orthogonal: any deployment path can migrate to any supported OpenSearch target.
 
 ## Key capabilities
 
@@ -64,5 +49,3 @@ Migration Assistant provides the following:
 
 Looking for the older ECS deployment model? See the [classic Migration Assistant documentation]({{site.url}}{{site.baseurl}}/classic/migration-assistant/).
 {: .note }
-
-{% include list.html list_items=page.items %}

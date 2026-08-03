@@ -104,9 +104,9 @@ Use this checklist to determine whether Migration Assistant is the right fit:
 - Do you need a high-performance backfill solution with pause, resume, and checkpoint recovery?
 - Are you migrating from Apache Solr and need a snapshot-based backfill solution?
 
-Use a managed-cloud path (Amazon EKS on AWS or GKE on GCP) if you also want the deployment tooling to prepare the cloud environment around the migration.
-
 If you answered "yes" to most of these questions, Migration Assistant is likely the right solution.
+
+If you also want the deployment tooling to prepare the cloud environment around the migration, use a managed-cloud path (Amazon EKS on AWS or GKE on GCP).
 
 ## Assumptions and limitations
 
