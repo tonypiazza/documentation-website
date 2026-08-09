@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Deploy on Google Kubernetes Engine
+title: Deploy on Google GKE
 nav_order: 3
 parent: Choose your deployment
 permalink: /migration-assistant/migration-phases/deploy/deploying-to-gke/

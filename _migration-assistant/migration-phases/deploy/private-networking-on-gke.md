@@ -12,6 +12,9 @@ By default, a Google Kubernetes Engine (GKE) migration deployment reaches the so
 
 All connectivity is **optional** and configured per data path, or "leg." With no configuration, behavior is unchanged from the standard GKE deployment. The legs are independent, so you can make some private and leave others public.
 
+This guide covers only the connectivity variables. Follow [Deploy on Google Kubernetes Engine (GKE)]({{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/deploy/deploying-to-gke/) for the full deployment (mirroring the images and setting `migration_release`), and add the connectivity variables described here to that same `terraform apply`.
+{: .note }
+
 These mechanisms are internal to Google Cloud Platform (GCP). A source or target hosted on another cloud or on premises cannot be reached through Private Service Connect or VPC peering; that requires a VPN or dedicated interconnect, which this path does not yet configure.
 {: .note }
 
