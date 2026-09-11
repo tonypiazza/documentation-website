@@ -1,0 +1,27 @@
+# Build context excludes for the team-review preview image.
+#
+# The Dockerfile must COPY . . (the Gemfile references the local
+# ./spec-insert gem, so Gemfile alone is not enough to bundle). Without
+# these excludes the context is several GB and local-only directories end
+# up inside a browsable image.
+
+.git
+.claude
+
+# Local build output; the image builds the site itself.
+_site
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+.bundle
+vendor/bundle
+node_modules
+
+# Editor and OS noise.
+.idea
+.vscode
+.DS_Store
+
+# Local preview state and agent notes that must not reach a shared image.
+CLAUDE.md
+.dev*

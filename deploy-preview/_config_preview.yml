@@ -1,0 +1,8 @@
+# Jekyll config overlay for the team-review preview container.
+# Layered on top of _config.yml at build time (JEKYLL_ENV=preview).
+#
+# url is emptied so every link is root-relative and resolves at whatever
+# hostname Aiven assigns — no hardcoded host. baseurl stays "/latest" so the
+# built paths match the production layout (and the nginx root->/latest redirect).
+url: ""
+baseurl: "/latest"
